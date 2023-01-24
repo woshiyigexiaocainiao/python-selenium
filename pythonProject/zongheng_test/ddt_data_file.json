@@ -1,0 +1,8 @@
+{
+  "case1": {"username": "17888826576","password": "ZHgk888zhgk"},
+  "case2": {"username": "17888826576","password": "654321"},
+  "case3": {"username": "17888826576","password": ""},
+  "case4": {"username": "1788882","password": "ZHgk888zhgk"},
+  "case5": {"username": "","password": "123456"},
+  "case6": {"username": "17888826576","password": "123456"}
+}

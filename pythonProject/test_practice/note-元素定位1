@@ -1,0 +1,130 @@
+百度首页部分代码
+<input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+<input type="submit" id="su" value="百度一下" class="bg s_btn">
+
+
+百度输入框代码：
+<span class="bg s_ipt_wr new-pmd quickdelete-wrap">
+    <span class="soutu-btn"></span>
+    <input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+    <i class="c-icon quickdelete c-color-gray2" title="清空" style="display: none;"></i>
+    <i class="quickdelete-line" style="display: none;"></i>
+    <span class="soutu-hover-tip" style="display: none;">按图片搜索</span></span>
+
+百度一下按钮代码
+<span class="bg s_btn_wr">
+    <input type="submit" id="su" value="百度一下" class="bg s_btn"></span>
+
+id 定位
+find_element_by_id('kw')
+find_element_by_id('su')
+
+name定位
+find_element_by_name('wd')
+
+class定位
+find_element_by_class_name('s_ipt')
+
+tag定位
+通过标签名（tag name）定位百度输入框
+find_element_by_tag_name('input')
+
+link定位
+用于定位文本链接
+find_element_by_link_text('新闻')
+find_element_by_link_text('hao123')
+find_element_by_link_text('地图')
+find_element_by_link_text('视频')
+find_element_by_link_text('贴吧')
+
+partial link定位
+<a class="m_nav" name="tj_lang" href="#">一个很长的文本链接</a>
+find_element_by_partial_link_text('一个很长的文本'）
+find_element_by_partial_link_text('文本链接')
+
+//*[@id="sidebar-menu"]/li[6]/ul/li[8]/a
+
+XPath定位
+1.绝对路径定位
+find_element_by_xpath('/html/body/div[1]/div[1]/div[5]/div/div/form/span[1]/input')   百度首页输入框
+
+2.利用元素属性定位
+find_element_by_xpath("//input[@id='kw']"
+find_element_by_xpath("//input[@autocomplete='off']")
+find_element_by_xpath("//*[@class='s_ipt']"
+
+3.层级与属性结合
+find_element_by_xpath("//span[@class=bg s_ipt_wr new-pmd quickdelete-wrap"]/input)
+find_element_by_xpath("//form[@id='form' and @action='/s']/span/input")
+find_element_by_xpath("//from[@name='f']/span[2]/input")
+
+4.使用逻辑运算符
+find_element_by_xpath("//input[@id='kw' and @name='wd']")
+
+5.使用contains方法
+find_element_by_xpath("//span[contains(@class,'s_ipt_wr')]/input")
+
+6使用text()
+<a href="http://news.baidu.com" target="_blank" class="mnav c-font-normal c-color-t">新闻</a>
+用于匹配显示文本信息
+find_element_by_xpath("//a[text(),'新闻']")
+find_element_by_xpath("//a[contains(text(),'一个很长的文本')]")
+
+
+
+CSS定位
+
+百度首页部分代码
+<input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+<input type="submit" id="su" value="百度一下" class="bg s_btn">
+
+.代表class
+#代表id
+*代表选择所有元素
+>父元素在前，子元素在后
+div+input
+[target=_blank]
+
+1.通过class定位
+find_element_by_css_selector('.s_ipt')
+find_element_by_css_selector('.bg s_btn')
+
+2.通过id定位
+find_element_by_css_selector('#kw')
+find_element_by_css_selector('#su')
+
+3.通过标签名定位
+find_element_by_css_selector('input')
+
+4.通过标签层级关系定位
+find_element_by_css_selector("span>input.s_ipt")
+
+5.通过属性定位
+find_element_by_css_selector("[maxlength=255]")
+find_element_by_css_selector("[autocomplete=off]")
+find_element_by_css_selector("[value='百度一下']")
+
+6.组合定位
+find_element_by_css_selector("form.fm > span > input#kw")
+find_element_by_css_selector("form#form > span > input.s_ipt")
+
+7.更多定位方法
+find_element_by_css_selector("[class*=s_ipt_wr]"  查找class属性包含"s_ipt_wr"字符串的元素
+find_element_by_css_selector("[class^=bg]")    查找class属性以"bg"字符串开头的元素
+find_element_by_css_selector("[class$=wrap]")   查找class属性以"wrap"字符串结尾的元素
+find_element_by_css_selector("form > input:nth-child(2)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+百度输入框代码：
+<span class="bg s_ipt_wr new-pmd quickdelete-wrap">
+    <span class="soutu-btn"></span>
+    <input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+    <i class="c-icon quickdelete c-color-gray2" title="清空" style="display: none;"></i>
+    <i class="quickdelete-line" style="display: none;"></i>
+    <span class="soutu-hover-tip" style="display: none;">按图片搜索</span></span>
+百度一下按钮代码
+<span class="bg s_btn_wr">
+    <input type="submit" id="su" value="百度一下" class="bg s_btn"></span>
+
+用BY定位元素
+需调用from selenium.webdriver.common.by import BY
+find_element(By.ID, "kw")
+find_element(By.CLASS_NAME, "s_ipt")
+find_element(By.NAME, "wd")
+find_element(By.TAR_NAME, "input")
+find_element(By.LINK_TEXT, "新闻")
+find_element(By.PARTIAL_LINK_TEXT, "一个很长的文本")
+find_element(By.XPATH, "/html/body/div[1]/div[1]/div[5]/div/div/form/span[1]/input")
+find_element(By.XPATH, "//input[@id='kw']")
+find_element(By.XPATH, "//input[@class='s_ipt']")
+find_element(By.XPATH, "//*[@type='submit']")
+find_element(By.XPATH, "//input[@type='submit']")
+find_element(By.XPATH, "//form[@id='kw']/span[2]/input")
+find_element(By.CSS_SELECTOR, "span.bg s_btn_wr > input#su")
